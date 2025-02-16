@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7fa79124f914e6e40bb43fb2ba6d72fe
+guid: f819846ec7fe7dd4ab10a4fa2b280696
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pngwing.com_0
+      name: wallpapersden.com_sci-fi-landscape-purple_1920x1080_0
       rect:
         serializedVersion: 2
-        x: 74
-        y: 309
-        width: 873
-        height: 330
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,8 +138,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5cd1a6dad4bdcb4995f2ab227dbf331
-      internalID: -1707217009
+      spriteID: 5aee8abd2e683834982a08405b111e41
+      internalID: -149725725
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e5f5fdd6c5e28fd42a9fa6ee5dec4a90
+    spriteID: ae2add5032f6bae4ba769f9449556bc5
     internalID: 0
     vertices: []
     indices: 
@@ -158,7 +158,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pngwing.com_0: -1707217009
+      wallpapersden.com_sci-fi-landscape-purple_1920x1080_0: -149725725
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

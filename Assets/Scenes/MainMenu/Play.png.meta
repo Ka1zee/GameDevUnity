@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b4882530988f6284db7347e5b57393d6
+guid: c3934da56f00aa14bba8b2783d540b05
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fullhd background for a game_0
+      name: Play_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 76
+        y: 760
+        width: 745
+        height: 243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,8 +138,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22292df36766292498570f6b480e7ab5
-      internalID: -1633544235
+      spriteID: 286f42ef72d8d054caa5c31022c850f9
+      internalID: 316226963
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 776047d09cb9ff7428b5ace51429ac83
+    spriteID: 6965da21937c4eb48afc39bb553084b0
     internalID: 0
     vertices: []
     indices: 
@@ -158,7 +158,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fullhd background for a game_0: -1633544235
+      Play_0: 316226963
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
