@@ -47,14 +47,13 @@ public class PlayerController : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * _sensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * _sensitivity * Time.deltaTime;
 
-        // Обмежуємо кут огляду по вертикалі (-90, 90)
         rotationX -= mouseY;
         rotationX = Mathf.Clamp(rotationX, 0f, 135f);
 
-        // Камеру нахиляємо тільки по X
+        
         _cameraTransform.localRotation = Quaternion.Euler(rotationX, 0, 0);
 
-        // Повертаємо персонажа навколо осі Y
+     
         transform.Rotate(Vector3.up * mouseX);
     }
 
@@ -66,9 +65,22 @@ public class PlayerController : MonoBehaviour
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
         move *= Input.GetKey(KeyCode.LeftShift) ? _speedRun : _speed;
 
+        // Перевіряємо, чи персонаж на землі
+        isGrounded = Physics.CheckSphere(_checkGround.position, _checkRadiusSphere, _groundMask);
+
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f; // Задаємо невелике значення, щоб стабільно стояти на землі
+        }
+
+        // Додаємо гравітацію
+        velocity.y += _gravity * Time.deltaTime;
+
+        // Додаємо рух вперед-назад + гравітацію
         if (_characterController != null)
         {
-            _characterController.Move(move * Time.deltaTime);
+            _characterController.Move((move + velocity) * Time.deltaTime);
         }
     }
+
 }

@@ -1033,6 +1033,71 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+<<<<<<< Updated upstream
+=======
+--- !u!1 &260726535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1849653245215293004, guid: 2503a0906d3903848942835fb7b3ee8b, type: 3}
+  m_PrefabInstance: {fileID: 1938073659}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &260726539
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260726535}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e4ad0688363177741adc3abdb6479d8e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!64 &260726540
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260726535}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -267207489758344800, guid: 2503a0906d3903848942835fb7b3ee8b, type: 3}
+--- !u!114 &260726541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260726535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da9983f626b8a844b8d6dab046a3ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _openOrCloseTime: 1
+>>>>>>> Stashed changes
 --- !u!1001 &260856287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4344,6 +4409,85 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+<<<<<<< Updated upstream
+=======
+--- !u!1 &1239459924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+  m_PrefabInstance: {fileID: 2075040640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &1239459925
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239459924}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.86, z: 0}
+--- !u!114 &1239459926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239459924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1904c09820b1b5a46b1846cf8fdf6f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterController: {fileID: 1239459925}
+  _cameraTransform: {fileID: 1872402882}
+  _checkGround: {fileID: 2102511892}
+  _groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _checkRadiusSphere: 0.2
+  _gravity: -14
+  _speed: 4
+  _speedRun: 7
+  _jumpHeight: 1
+  _sensitivity: 50
+--- !u!4 &1239459928 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400006, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+  m_PrefabInstance: {fileID: 2075040640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1239459930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239459924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ab00ca6cbe23e4c975b6ea267aaebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 1872402885}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  _raycastDistance: 1
+>>>>>>> Stashed changes
 --- !u!1 &1258538818 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5525804364433579580, guid: 7fdf0ce100d570d4e808e71aaeb5d42b, type: 3}
@@ -6567,6 +6711,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: SciFiLikeTiles
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 6623436368738246984, guid: 2503a0906d3903848942835fb7b3ee8b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.7
@@ -6602,6 +6747,11 @@ PrefabInstance:
     - target: {fileID: 8761175524360625155, guid: 2503a0906d3903848942835fb7b3ee8b, type: 3}
       propertyPath: m_DynamicOccludee
       value: 1
+=======
+    - target: {fileID: 1849653245215293004, guid: 2503a0906d3903848942835fb7b3ee8b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -6716,11 +6866,43 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2503a0906d3903848942835fb7b3ee8b, type: 3}
       insertIndex: -1
+<<<<<<< Updated upstream
       addedObject: {fileID: 311610914}
     - targetCorrespondingSourceObject: {fileID: 1849653245215293004, guid: 2503a0906d3903848942835fb7b3ee8b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1306681258}
   m_SourcePrefab: {fileID: 100100000, guid: 2503a0906d3903848942835fb7b3ee8b, type: 3}
+>>>>>>> Stashed changes
+=======
+      addedObject: {fileID: 1938073661}
+    - targetCorrespondingSourceObject: {fileID: 1849653245215293004, guid: 2503a0906d3903848942835fb7b3ee8b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 260726539}
+    - targetCorrespondingSourceObject: {fileID: 1849653245215293004, guid: 2503a0906d3903848942835fb7b3ee8b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 260726540}
+    - targetCorrespondingSourceObject: {fileID: 1849653245215293004, guid: 2503a0906d3903848942835fb7b3ee8b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 260726541}
+  m_SourcePrefab: {fileID: 100100000, guid: 2503a0906d3903848942835fb7b3ee8b, type: 3}
+--- !u!1 &1938073660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2503a0906d3903848942835fb7b3ee8b, type: 3}
+  m_PrefabInstance: {fileID: 1938073659}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1938073661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938073660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6204bf8d6eb0c408fa979cf6f81340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _openOrCloseTime: 1
 >>>>>>> Stashed changes
 --- !u!1 &1972813096
 GameObject:
@@ -7400,7 +7582,91 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ac87c0e57bbb1f45b9485062790f352, type: 3}
+<<<<<<< Updated upstream
 --- !u!1 &2064415992 stripped
+=======
+--- !u!1001 &2075040640
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100004, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      propertyPath: m_Name
+      value: CyberSoldier
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.755848
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.836652
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e1b7352eec7a08848b3121f146902837, type: 2}
+    - target: {fileID: 13700000, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c1aa7377d9975a408745602a24464bd, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400006, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2102511892}
+    - targetCorrespondingSourceObject: {fileID: 400004, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1872402882}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100004, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1239459926}
+    - targetCorrespondingSourceObject: {fileID: 100004, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1239459925}
+    - targetCorrespondingSourceObject: {fileID: 100004, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1239459930}
+  m_SourcePrefab: {fileID: 100100000, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+--- !u!1 &2102511891
+>>>>>>> Stashed changes
 GameObject:
   m_CorrespondingSourceObject: {fileID: 108875012627547185, guid: 33e9c339d3e8725469661d119107273a, type: 3}
   m_PrefabInstance: {fileID: 922114163}
