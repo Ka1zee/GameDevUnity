@@ -1,12 +1,18 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Security.Cryptography.X509Certificates;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
     public static int playerhealth;
     public static bool gameOver;
     public TextMeshProUGUI playerhealtText;
+    public GameObject completeUI;
+    public void Complete()
+    {
+        completeUI.SetActive(true);
+    }
     void Start()
     {
         playerhealth = 100;
@@ -20,7 +26,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
         if (gameOver)
         {
-            SceneManager.LoadScene("SampleScene");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            SceneManager.LoadScene(2);
         }
     }
 
