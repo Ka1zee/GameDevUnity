@@ -1403,9 +1403,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 129851373}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 129851378}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2145719362}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2145719365}
   m_SourcePrefab: {fileID: 100100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
 --- !u!1 &129851372 stripped
 GameObject:
@@ -1481,6 +1487,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
   m_PrefabInstance: {fileID: 123083778}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &129851378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129851372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987c053c18d8b54e875c3857903f171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTag: p4
 --- !u!1 &148321166 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
@@ -1508,6 +1527,19 @@ NavMeshAgent:
   m_BaseOffset: 0.61188376
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &148321171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148321166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987c053c18d8b54e875c3857903f171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTag: p3
 --- !u!1 &159356422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2282,6 +2314,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
   m_PrefabInstance: {fileID: 565882404}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &182137718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182137712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987c053c18d8b54e875c3857903f171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTag: p2
 --- !u!1 &188135815 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 939243345475860251, guid: 7fdf0ce100d570d4e808e71aaeb5d42b, type: 3}
@@ -2580,7 +2625,7 @@ GameObject:
   - component: {fileID: 236323945}
   m_Layer: 0
   m_Name: Points (2)
-  m_TagString: Points
+  m_TagString: p2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3003,6 +3048,19 @@ NavMeshAgent:
   m_BaseOffset: 0.61188376
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &281450200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281450195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987c053c18d8b54e875c3857903f171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTag: p2
 --- !u!1 &287570921
 GameObject:
   m_ObjectHideFlags: 0
@@ -3416,6 +3474,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
   m_PrefabInstance: {fileID: 997685159}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &317690169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317690163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987c053c18d8b54e875c3857903f171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTag: p3
 --- !u!4 &339259229 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9a3c5b7919203374f9d91661217e4159, type: 3}
@@ -3470,7 +3541,7 @@ GameObject:
   - component: {fileID: 358366685}
   m_Layer: 0
   m_Name: Point
-  m_TagString: Untagged
+  m_TagString: p4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3634,9 +3705,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1008153617}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1008153622}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 281450197}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 281450200}
   m_SourcePrefab: {fileID: 100100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
 --- !u!4 &381437873 stripped
 Transform:
@@ -4607,6 +4684,19 @@ NavMeshAgent:
   m_BaseOffset: 0.61188376
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &474800470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474800465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987c053c18d8b54e875c3857903f171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTag: p4
 --- !u!1 &474960195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4618,7 +4708,7 @@ GameObject:
   - component: {fileID: 474960196}
   m_Layer: 0
   m_Name: Points (1)
-  m_TagString: Points
+  m_TagString: p1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4654,7 +4744,7 @@ GameObject:
   - component: {fileID: 476596390}
   m_Layer: 0
   m_Name: Point
-  m_TagString: Untagged
+  m_TagString: p3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4740,7 +4830,7 @@ GameObject:
   - component: {fileID: 487600898}
   m_Layer: 0
   m_Name: Point (2)
-  m_TagString: Untagged
+  m_TagString: p4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5412,7 +5502,7 @@ GameObject:
   - component: {fileID: 562804288}
   m_Layer: 0
   m_Name: Point (2)
-  m_TagString: Untagged
+  m_TagString: Points
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5576,9 +5666,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 182137713}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 182137718}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1299051671}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1299051674}
   m_SourcePrefab: {fileID: 100100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
 --- !u!1 &568522341
 GameObject:
@@ -5593,7 +5689,7 @@ GameObject:
   - component: {fileID: 568522343}
   m_Layer: 0
   m_Name: Point (1)
-  m_TagString: Untagged
+  m_TagString: Points
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6865,6 +6961,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 719662783}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 719662784}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1960081265}
@@ -6948,6 +7047,19 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.29, z: 0}
+--- !u!114 &719662784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719662777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987c053c18d8b54e875c3857903f171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTag: Points
 --- !u!1 &723021244
 GameObject:
   m_ObjectHideFlags: 0
@@ -7036,7 +7148,7 @@ GameObject:
   - component: {fileID: 724767104}
   m_Layer: 0
   m_Name: Point (2)
-  m_TagString: Untagged
+  m_TagString: p1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7120,7 +7232,7 @@ GameObject:
   - component: {fileID: 737620835}
   m_Layer: 0
   m_Name: Points (3)
-  m_TagString: Points
+  m_TagString: p3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7217,6 +7329,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
   m_PrefabInstance: {fileID: 1768285003}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &744935780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744935774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987c053c18d8b54e875c3857903f171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTag: p1
 --- !u!1001 &748313821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7465,7 +7590,7 @@ GameObject:
   - component: {fileID: 756172237}
   m_Layer: 0
   m_Name: Point (1)
-  m_TagString: Untagged
+  m_TagString: p3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8837,7 +8962,7 @@ GameObject:
   - component: {fileID: 877679832}
   m_Layer: 0
   m_Name: Point
-  m_TagString: Untagged
+  m_TagString: p2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9334,6 +9459,19 @@ NavMeshAgent:
   m_BaseOffset: 0.61188376
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &973163166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973163161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987c053c18d8b54e875c3857903f171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTag: Points
 --- !u!1 &975711242
 GameObject:
   m_ObjectHideFlags: 0
@@ -9615,9 +9753,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 317690164}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 317690169}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 148321168}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 148321171}
   m_SourcePrefab: {fileID: 100100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
 --- !u!4 &999996476 stripped
 Transform:
@@ -9836,6 +9980,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
   m_PrefabInstance: {fileID: 381358109}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1008153622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008153616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987c053c18d8b54e875c3857903f171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTag: p2
 --- !u!1001 &1026717563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11771,7 +11928,7 @@ GameObject:
   - component: {fileID: 1254446094}
   m_Layer: 0
   m_Name: Point
-  m_TagString: Untagged
+  m_TagString: p1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12009,6 +12166,19 @@ NavMeshAgent:
   m_BaseOffset: 0.61188376
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1299051674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299051669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987c053c18d8b54e875c3857903f171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTag: p2
 --- !u!4 &1301005681 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1271405819880457703, guid: 33e9c339d3e8725469661d119107273a, type: 3}
@@ -12098,7 +12268,7 @@ GameObject:
   - component: {fileID: 1399190345}
   m_Layer: 0
   m_Name: Point (1)
-  m_TagString: Untagged
+  m_TagString: p4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12399,7 +12569,7 @@ GameObject:
   - component: {fileID: 1436559166}
   m_Layer: 0
   m_Name: Point (2)
-  m_TagString: Untagged
+  m_TagString: p2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12810,7 +12980,7 @@ GameObject:
   - component: {fileID: 1458925171}
   m_Layer: 0
   m_Name: Point
-  m_TagString: Untagged
+  m_TagString: Points
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14256,9 +14426,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1645600844}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1645600849}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 474800467}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 474800470}
   m_SourcePrefab: {fileID: 100100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
 --- !u!1 &1645600843 stripped
 GameObject:
@@ -14334,6 +14510,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
   m_PrefabInstance: {fileID: 1633929281}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1645600849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645600843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987c053c18d8b54e875c3857903f171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTag: p4
 --- !u!1001 &1647504624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14418,7 +14607,7 @@ GameObject:
   - component: {fileID: 1675036507}
   m_Layer: 0
   m_Name: Point (2)
-  m_TagString: Untagged
+  m_TagString: p3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15001,7 +15190,7 @@ GameObject:
   - component: {fileID: 1764715408}
   m_Layer: 0
   m_Name: Points (4)
-  m_TagString: Points
+  m_TagString: p4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15115,9 +15304,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 744935775}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 744935780}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 973163163}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 973163166}
   m_SourcePrefab: {fileID: 100100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
 --- !u!1 &1780681822
 GameObject:
@@ -15132,7 +15327,7 @@ GameObject:
   - component: {fileID: 1780681824}
   m_Layer: 0
   m_Name: Point (1)
-  m_TagString: Untagged
+  m_TagString: p2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15595,7 +15790,7 @@ GameObject:
   - component: {fileID: 1855006469}
   m_Layer: 0
   m_Name: Point (1)
-  m_TagString: Untagged
+  m_TagString: p1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17903,6 +18098,19 @@ NavMeshAgent:
   m_BaseOffset: 0.61188376
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2145719365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145719360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5987c053c18d8b54e875c3857903f171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolTag: p4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
