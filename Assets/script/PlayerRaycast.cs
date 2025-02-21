@@ -4,19 +4,25 @@ public class NewBehaviourScript : MonoBehaviour
 {
     [SerializeField] private Camera _camera;
     [SerializeField] private LayerMask _layerMask;
-    [SerializeField] private float _raycastDistance = 1f;
+    [SerializeField] private float _raycastDistance = 6f; // Попробуйте увеличить расстояние
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            RaycastHit hit;
+            RaycastHit hit; ;
 
-            if(Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, _raycastDistance, _layerMask))
+            if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, _raycastDistance, _layerMask))
             {
-                if(hit.collider.TryGetComponent(out OpenableObject openableObject))
+                // Проверяем наличие двери
+                if (hit.collider.TryGetComponent(out OpenableObject openableObject))
                 {
                     openableObject.OpenOrClose();
+                }
+                // Проверяем наличие аптечки
+                else if (hit.collider.TryGetComponent(out Med med))
+                {
+                    med.Heal();
                 }
             }
         }
