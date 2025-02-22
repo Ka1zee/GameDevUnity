@@ -1,27 +1,40 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class TrapEffect : MonoBehaviour
 {
-    public Image whiteScreen; // Посилання на білий екран
-    public float fadeDuration = 0.5f; // Тривалість ефекту
+    public Image whiteScreen; // Ссылка на белый экран
+    public float fadeDuration = 0.5f; // Длительность эффекта
+    private AudioSource audioSource; // Аудио источник
+
+    private void Start()
+    {
+        // Получаем компонент AudioSource (он должен быть на этом же объекте)
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) // Перевіряємо, чи це гравець
+        if (other.CompareTag("Player")) // Проверяем, игрок ли это
         {
             StartCoroutine(FlashWhiteScreen());
+
+            // Включаем звук, если он есть и не играет
+            if (audioSource != null && !audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
         }
     }
 
     IEnumerator FlashWhiteScreen()
     {
-        // Робимо екран повністю білим
+        // Делаем экран полностью белым
         whiteScreen.color = new Color(1, 1, 1, 1);
         yield return new WaitForSeconds(fadeDuration);
 
-        // Плавно зменшуємо прозорість (fade out)
+        // Плавно уменьшаем прозрачность (fade out)
         float alpha = 1f;
         while (alpha > 0)
         {
@@ -31,4 +44,3 @@ public class TrapEffect : MonoBehaviour
         }
     }
 }
-
