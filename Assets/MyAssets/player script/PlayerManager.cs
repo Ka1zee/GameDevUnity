@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-using System.Security.Cryptography.X509Certificates;
+
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
