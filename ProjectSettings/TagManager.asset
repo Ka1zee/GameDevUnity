@@ -13,6 +13,8 @@ TagManager:
   - p4
   - p5
   - p6
+  - item
+  - Item
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,7 @@ public class NewBehaviourScript : MonoBehaviour
     [SerializeField] private Camera _camera;
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private float _raycastDistance = 6f; // Попробуйте увеличить расстояние
+    private Outline lastOutlineObject;
 
     void Update()
     {

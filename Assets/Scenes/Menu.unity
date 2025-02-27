@@ -907,7 +907,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _opeOrCloseTime: 1
-  _rotateByDegress: -90
+  _rotateByDegrees: -90
+  _audioSource: {fileID: 0}
 --- !u!4 &71395126 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1023803010840846480, guid: 18cbb28446f3b6649bd4f9c45e29d6a5, type: 3}
@@ -2495,7 +2496,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _opeOrCloseTime: 1
-  _rotateByDegress: -90
+  _rotateByDegrees: -90
+  _audioSource: {fileID: 0}
 --- !u!4 &447227278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6833045913443641605, guid: 6d3a6a3de37804d42b682ce33cf9f5f9, type: 3}
@@ -2633,7 +2635,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _opeOrCloseTime: 1
-  _rotateByDegress: -90
+  _rotateByDegrees: -90
+  _audioSource: {fileID: 0}
 --- !u!1 &506239576 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5011828237151035597, guid: 6d3a6a3de37804d42b682ce33cf9f5f9, type: 3}
@@ -3532,7 +3535,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _opeOrCloseTime: 1
-  _rotateByDegress: -90
+  _rotateByDegrees: -90
+  _audioSource: {fileID: 0}
 --- !u!1 &686565089 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6149785491154823245, guid: 69f27df9dae5bd242953871dd31f99e3, type: 3}
@@ -4853,7 +4857,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _opeOrCloseTime: 1
-  _rotateByDegress: -90
+  _rotateByDegrees: -90
+  _audioSource: {fileID: 0}
 --- !u!1 &926291356 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3265539147797403661, guid: ab2dd0706daeff54d87d645bbbf25bbf, type: 3}
@@ -5083,7 +5088,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _opeOrCloseTime: 1
-  _rotateByDegress: -75
+  _rotateByDegrees: -90
+  _audioSource: {fileID: 0}
 --- !u!4 &1008609419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2348123644608985452, guid: 81adc2af364ad2942892c5225e6a4e8a, type: 3}
@@ -5408,7 +5414,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 023b2b5a4270def46a6694e691352a97, type: 3}
   m_Resource: {fileID: 8300000, guid: 023b2b5a4270def46a6694e691352a97, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.223
+  m_Volume: 0.09
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6529,7 +6535,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _opeOrCloseTime: 1
-  _rotateByDegress: -90
+  _rotateByDegrees: -90
+  _audioSource: {fileID: 0}
 --- !u!1 &1335427809
 GameObject:
   m_ObjectHideFlags: 0
@@ -6599,7 +6606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _opeOrCloseTime: 1
-  _rotateByDegress: -90
+  _rotateByDegrees: -90
+  _audioSource: {fileID: 0}
 --- !u!4 &1337091415 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8075795743059959683, guid: a8b9c6f9a89711d4da799da51e7037ce, type: 3}
@@ -8805,7 +8813,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _opeOrCloseTime: 1
-  _rotateByDegress: -90
+  _rotateByDegrees: -90
+  _audioSource: {fileID: 0}
 --- !u!4 &1700705587 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5124656252117826301, guid: 08a101170a80091489cedf4e31d15cc9, type: 3}
@@ -8946,7 +8955,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _opeOrCloseTime: 1
-  _rotateByDegress: -90
+  _rotateByDegrees: -90
+  _audioSource: {fileID: 0}
 --- !u!4 &1719586248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1271405819880457703, guid: 33e9c339d3e8725469661d119107273a, type: 3}
@@ -9696,7 +9706,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _opeOrCloseTime: 1
-  _rotateByDegress: -90
+  _rotateByDegrees: -90
+  _audioSource: {fileID: 0}
 --- !u!1 &1794446608 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3717003517754868665, guid: 6d3a6a3de37804d42b682ce33cf9f5f9, type: 3}
@@ -10288,7 +10299,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _opeOrCloseTime: 1
-  _rotateByDegress: -90
+  _rotateByDegrees: -90
+  _audioSource: {fileID: 0}
 --- !u!4 &1936412974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2348123644608985452, guid: 81adc2af364ad2942892c5225e6a4e8a, type: 3}
@@ -10903,7 +10915,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _opeOrCloseTime: 1
-  _rotateByDegress: -90
+  _rotateByDegrees: -90
+  _audioSource: {fileID: 0}
 --- !u!1 &2011884768 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 939243345475860251, guid: 7fdf0ce100d570d4e808e71aaeb5d42b, type: 3}
