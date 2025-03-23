@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,16 +17,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _speedRun = 7f;
     [SerializeField] private float _jumpHeight = 1f;
 
-    [Range(1, 100)]
-    [SerializeField] private float _sensitivity = 50f;
-
+    public Slider slider;
+    public Text sensa; // Добавляем ссылку на текстовый элемент sensa
     private float rotationX;
+    public float mouseSensitivity = 100f;
     private bool isGrounded;
     private Vector3 velocity;
     private Vector3 move;
 
     void Start()
     {
+        mouseSensitivity = PlayerPrefs.GetFloat("SensitivityPreference", 100f);
+        slider.value = mouseSensitivity / 10;
+        UpdateSensitivityText(); // Обновляем текстовое значение чувствительности
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -44,8 +48,9 @@ public class PlayerController : MonoBehaviour
 
     private void Rotate()
     {
-        float mouseX = Input.GetAxis("Mouse X") * _sensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * _sensitivity * Time.deltaTime;
+        PlayerPrefs.SetFloat("SensitivityPreference", mouseSensitivity);
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
         // Обмежуємо кут огляду по вертикалі (-90, 90)
         rotationX -= mouseY;
@@ -71,4 +76,20 @@ public class PlayerController : MonoBehaviour
             _characterController.Move(move * Time.deltaTime);
         }
     }
+
+    public void AdjustSpeed(float newSpeed)
+    {
+        mouseSensitivity = newSpeed * 10;
+        UpdateSensitivityText(); // Обновляем текстовое значение чувствительности
+    }
+
+    private void UpdateSensitivityText()
+    {
+        if (sensa != null)
+        {
+            sensa.text = mouseSensitivity.ToString("F1"); // Форматируем значение до одного знака после запятой
+        }
+    }
 }
+
+

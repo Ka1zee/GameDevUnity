@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject gameManager; // Добавляем ссылку на объект GameManager
+    public GameObject settingsMenu; // Добавляем ссылку на объект SettingsMenu
+
     public void PlayGame()
     {
         // Завантажуємо нову сцену
@@ -15,6 +18,12 @@ public class MainMenu : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+    public void ShowSettingsMenu()
+    {
+        gameManager.SetActive(false); // Скрываем GameManager
+        settingsMenu.SetActive(true); // Показываем SettingsMenu
     }
 
     // Метод для обробки події після завантаження сцени
