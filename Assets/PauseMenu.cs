@@ -1,6 +1,4 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -8,50 +6,48 @@ public class PauseMenu : MonoBehaviour
 {
     public bool PauseGame;
     public GameObject pauseGameMenu;
-    public TextMeshProUGUI playerhealtText; // Добавляем ссылку на объект PlayerHealth
-    public GameObject dot; // Добавляем ссылку на объект dot
-    public GameObject pause; // Добавляем ссылку на объект GameManager
-    public GameObject settingsMenu; // Добавляем ссылку на объект SettingsMenu
+    public TextMeshProUGUI playerhealtText;
+    public GameObject dot;
+    public GameObject settingsMenu;
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (PauseGame)
+            // Якщо settingsMenu відкритий — закриваємо його
+            if (settingsMenu.activeSelf)
+            {
+                HideSettingsMenu();
+            }
+            // Якщо гра на паузі, але settingsMenu не відкритий — продовжуємо гру
+            else if (PauseGame)
             {
                 Resume();
             }
+            // Якщо гра не на паузі — ставимо на паузу
             else
             {
                 Pause();
             }
         }
 
-        // Проверяем активность settingsMenu и pauseGameMenu
-        if (settingsMenu.activeSelf || pauseGameMenu.activeSelf)
-        {
-            playerhealtText.gameObject.SetActive(false); // Отключаем PlayerHealth
-            dot.SetActive(false); // Отключаем dot
-        }
-        else
-        {
-            playerhealtText.gameObject.SetActive(true); // Включаем PlayerHealth
-            dot.SetActive(true); // Включаем dot
-        }
+        // Відключаємо HUD (здоров'я та приціл), якщо відкрите будь-яке меню
+        bool anyMenuActive = settingsMenu.activeSelf || pauseGameMenu.activeSelf;
+        playerhealtText.gameObject.SetActive(!anyMenuActive);
+        dot.SetActive(!anyMenuActive);
 
-        // Управляем состоянием курсора
-        if (settingsMenu.activeSelf || pauseGameMenu.activeSelf)
+        // Керування курсором та часом
+        if (anyMenuActive)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            Time.timeScale = 0f; // Останавливаем время, если settingsMenu или pauseGameMenu активен
+            Time.timeScale = 0f;
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            Time.timeScale = 1f; // Возобновляем время, если settingsMenu и pauseGameMenu не активны
+            Time.timeScale = 1f;
         }
     }
 
@@ -60,22 +56,13 @@ public class PauseMenu : MonoBehaviour
         pauseGameMenu.SetActive(false);
         Time.timeScale = 1f;
         PauseGame = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     public void Pause()
     {
-        if (settingsMenu.activeSelf)
-        {
-            return; // Если settingsMenu активен, не активируем pauseGameMenu
-        }
-
         pauseGameMenu.SetActive(true);
         Time.timeScale = 0f;
         PauseGame = true;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
     }
 
     public void LoadMenu()
@@ -86,21 +73,19 @@ public class PauseMenu : MonoBehaviour
 
     public void ShowSettingsMenu()
     {
-        pauseGameMenu.SetActive(false); // Скрываем pauseGameMenu
-        settingsMenu.SetActive(true); // Показываем SettingsMenu
-        Time.timeScale = 0f; // Останавливаем время
-        Cursor.lockState = CursorLockMode.None; // Разблокируем курсор
-        Cursor.visible = true;
+        pauseGameMenu.SetActive(false);
+        settingsMenu.SetActive(true);
     }
 
     public void HideSettingsMenu()
     {
-        settingsMenu.SetActive(false); // Скрываем SettingsMenu
-        pauseGameMenu.SetActive(true); // Показываем pauseGameMenu
-        Time.timeScale = 0f; // Останавливаем время
-        Cursor.lockState = CursorLockMode.None; // Разблокируем курсор
-        Cursor.visible = true;
+        settingsMenu.SetActive(false);
+
+        // Якщо гра на паузі — показуємо головне меню паузи
+        if (PauseGame)
+        {
+            pauseGameMenu.SetActive(true);
+        }
+        // Якщо гра не на паузі — просто закриваємо settingsMenu (Resume вже оброблює курсор і час)
     }
 }
-
-

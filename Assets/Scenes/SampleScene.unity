@@ -2664,7 +2664,6 @@ MonoBehaviour:
   pauseGameMenu: {fileID: 160876587}
   playerhealtText: {fileID: 604884060}
   dot: {fileID: 1890176734}
-  pause: {fileID: 160876587}
   settingsMenu: {fileID: 564785608}
 --- !u!1 &173215903
 GameObject:
