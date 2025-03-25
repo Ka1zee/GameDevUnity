@@ -65,16 +65,21 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveZ = Input.GetAxis("Vertical");
+        // Використовуємо GetAxisRaw для миттєвої реакції (-1, 0, 1)
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveZ = Input.GetAxisRaw("Vertical");
 
-        Vector3 move = transform.right * moveX + transform.forward * moveZ;
-        move *= Input.GetKey(KeyCode.LeftShift) ? _speedRun : _speed;
+        // Вектор руху відносно камери (без вертикальної складової)
+        Vector3 moveDirection = _cameraTransform.right * moveX + _cameraTransform.forward * moveZ;
+        moveDirection.y = 0;
 
-        if (_characterController != null)
-        {
-            _characterController.Move(move * Time.deltaTime);
-        }
+        // Нормалізація та швидкість
+        if (moveDirection.magnitude > 0)
+            moveDirection.Normalize();
+
+        // Миттєвий рух без фізики
+        float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? _speedRun : _speed;
+        _characterController.Move(moveDirection * currentSpeed * Time.deltaTime);
     }
 
     public void AdjustSpeed(float newSpeed)
