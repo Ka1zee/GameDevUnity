@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
         // Обмежуємо кут огляду по вертикалі (-90, 90)
         rotationX -= mouseY;
-        rotationX = Mathf.Clamp(rotationX, 0f, 180f);
+        rotationX = Mathf.Clamp(rotationX, 0f, 160f);
 
         // Камеру нахиляємо тільки по X
         _cameraTransform.localRotation = Quaternion.Euler(rotationX, 0, 0);
