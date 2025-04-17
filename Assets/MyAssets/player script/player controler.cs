@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,7 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _jumpHeight = 1f;
 
     public Slider slider;
-    public Text sensa; // Добавляем ссылку на текстовый элемент sensa
+    public TextMeshProUGUI sensa; // Добавляем ссылку на текстовый элемент sensa
     private float rotationX;
     public float mouseSensitivity = 100f;
     private bool isGrounded;

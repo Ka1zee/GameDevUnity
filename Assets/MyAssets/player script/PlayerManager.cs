@@ -1,28 +1,34 @@
-using UnityEngine;
-using TMPro;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
+using TMPro;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
     public static int playerhealth;
     public static bool gameOver;
+
     public TextMeshProUGUI playerhealtText;
     public GameObject completeUI;
+    public Image healthFillImage; // <- нове: це твій бар заповнення (Image зі стилем Filled)
+
+    private int maxHealth = 100;
+
     public void Complete()
     {
         completeUI.SetActive(true);
     }
+
     void Start()
     {
-        playerhealth = 100;
+        playerhealth = maxHealth;
         gameOver = false;
+        UpdateUI();
     }
-
 
     void Update()
     {
-        playerhealtText.text = "" + playerhealth;
+        UpdateUI();
 
         if (gameOver)
         {
@@ -32,6 +38,14 @@ public class NewMonoBehaviourScript : MonoBehaviour
         }
     }
 
+    void UpdateUI()
+    {
+        playerhealtText.text = playerhealth.ToString();
+
+        // Обчислюємо заповнення від 0 до 1
+        float fillAmount = Mathf.Clamp01((float)playerhealth / maxHealth);
+        healthFillImage.fillAmount = fillAmount;
+    }
 
     public static void Damage(int damageCount)
     {

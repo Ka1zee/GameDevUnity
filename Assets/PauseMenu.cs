@@ -1,6 +1,6 @@
-using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,33 +10,35 @@ public class PauseMenu : MonoBehaviour
     public GameObject dot;
     public GameObject settingsMenu;
 
+    // ƒодане посиланн€ на об'Їкт PlayerHealth
+    public GameObject playerHealth;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // якщо settingsMenu в≥дкритий Ч закриваЇмо його
             if (settingsMenu.activeSelf)
             {
                 HideSettingsMenu();
             }
-            // якщо гра на пауз≥, але settingsMenu не в≥дкритий Ч продовжуЇмо гру
             else if (PauseGame)
             {
                 Resume();
             }
-            // якщо гра не на пауз≥ Ч ставимо на паузу
             else
             {
                 Pause();
             }
         }
 
-        // ¬≥дключаЇмо HUD (здоров'€ та приц≥л), €кщо в≥дкрите будь-€ке меню
+        // ¬≥дключаЇмо HUD (здоров'€, приц≥л та PlayerHealth), €кщо в≥дкрите будь-€ке меню
         bool anyMenuActive = settingsMenu.activeSelf || pauseGameMenu.activeSelf;
         playerhealtText.gameObject.SetActive(!anyMenuActive);
         dot.SetActive(!anyMenuActive);
 
-        //  еруванн€ курсором та часом
+        // ¬≥дключаЇмо PlayerHealth
+        playerHealth.SetActive(!anyMenuActive);
+
         if (anyMenuActive)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -81,11 +83,9 @@ public class PauseMenu : MonoBehaviour
     {
         settingsMenu.SetActive(false);
 
-        // якщо гра на пауз≥ Ч показуЇмо головне меню паузи
         if (PauseGame)
         {
             pauseGameMenu.SetActive(true);
         }
-        // якщо гра не на пауз≥ Ч просто закриваЇмо settingsMenu (Resume вже оброблюЇ курсор ≥ час)
     }
 }
