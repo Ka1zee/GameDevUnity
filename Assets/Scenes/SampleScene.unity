@@ -12351,19 +12351,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4260404115941998355, guid: 54eae2248d2a3824e905a6464544e3d1, type: 3}
---- !u!114 &759258921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639896425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75a44d4a42bc8fc498ac9703a879d682, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageAmount: 20
 --- !u!114 &759258924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12382,6 +12369,24 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &759258927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639896425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca89bb64cbd49e4c8e0e95d876a6bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 25
+  attackRange: 2
+  critChance: 0.3
+  critMultiplier: 1.25
+  isThrown: 0
+  critEffectPrefab: {fileID: 0}
 --- !u!4 &759307219 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1023803010840846480, guid: 18cbb28446f3b6649bd4f9c45e29d6a5, type: 3}
@@ -24952,10 +24957,10 @@ PrefabInstance:
       addedObject: {fileID: 759258917}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54eae2248d2a3824e905a6464544e3d1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 759258921}
+      addedObject: {fileID: 759258924}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54eae2248d2a3824e905a6464544e3d1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 759258924}
+      addedObject: {fileID: 759258927}
   m_SourcePrefab: {fileID: 100100000, guid: 54eae2248d2a3824e905a6464544e3d1, type: 3}
 --- !u!1001 &1745858844
 PrefabInstance:
@@ -30478,8 +30483,13 @@ MonoBehaviour:
   weaponLayer:
     serializedVersion: 2
     m_Bits: 8
+  weaponLayerInHand: 0
+  weaponLayerOnGround: 0
   holdPosition: {x: 0.1, y: -0.1, z: 0.2}
   holdRotation: {x: 0, y: 0, z: 0}
+  weaponSortingOrder: 100
+  thrownDamageDuration: 3
+  attackHitWindow: 0.25
 --- !u!1 &2075073832
 GameObject:
   m_ObjectHideFlags: 0

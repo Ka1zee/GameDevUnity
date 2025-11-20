@@ -2,62 +2,62 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
-    // Посилання на компоненти
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     private Animator anim;
     private WeaponSystem weaponSystem;
 
-    // Параметри аніматора - константи для уникнення помилок
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     private readonly string PARAM_IS_MOVING = "IsMoving";
     private readonly string PARAM_HAS_WEAPON = "HasWeapon";
     private readonly string PARAM_ATTACK = "Attack";
 
-    // Змінні для стану
+    // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     private bool isAttacking = false;
-    private float attackCooldown = 0f; // Додаємо кулдаун для атаки
-    private float attackCooldownTime = 0.5f; // Час кулдауну в секундах
+    private float attackCooldown = 0f; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+    private float attackCooldownTime = 0.5f; // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
     void Start()
     {
-        // Отримуємо компонент аніматора
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         anim = GetComponent<Animator>();
         if (anim == null)
         {
-            Debug.LogError("Аніматор не знайдено! Додай компонент Animator до персонажа.");
+            Debug.LogError("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Animator пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.");
             enabled = false;
             return;
         }
 
-        // Шукаємо WeaponSystem на об'єкті або в його дочірніх об'єктах
+        // пїЅпїЅпїЅпїЅпїЅпїЅ WeaponSystem пїЅпїЅ пїЅпїЅ'пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ'пїЅпїЅпїЅпїЅпїЅ
         weaponSystem = GetComponentInChildren<WeaponSystem>();
         if (weaponSystem == null)
         {
-            Debug.LogWarning("WeaponSystem не знайдено! Зброя буде недоступна.");
+            Debug.LogWarning("WeaponSystem пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.");
         }
     }
 
     void Update()
     {
-        // Обробка кулдауну атаки
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         if (attackCooldown > 0)
         {
             attackCooldown -= Time.deltaTime;
         }
 
-        // Перевіряємо наявність зброї
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
         bool hasWeapon = weaponSystem != null && weaponSystem.HasWeapon;
 
-        // Обчислюємо, чи рухається персонаж
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         float moveInput = Mathf.Max(Mathf.Abs(Input.GetAxis("Horizontal")),
                                    Mathf.Abs(Input.GetAxis("Vertical")));
         bool isMoving = moveInput > 0.1f;
 
-        // Обробка атаки - можлива тільки коли закінчився кулдаун
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (Input.GetMouseButtonDown(0) && hasWeapon && !isAttacking && attackCooldown <= 0)
         {
             StartAttack();
         }
 
-        // Оновлюємо параметри анімації
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         anim.SetBool(PARAM_IS_MOVING, isMoving && !isAttacking);
         anim.SetBool(PARAM_HAS_WEAPON, hasWeapon);
     }
@@ -67,30 +67,34 @@ public class AnimationManager : MonoBehaviour
         isAttacking = true;
         attackCooldown = attackCooldownTime;
 
-        // Важливо: явно скидаємо тригер перед встановленням
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         anim.ResetTrigger(PARAM_ATTACK);
-        // Встановлюємо тригер атаки
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         anim.SetTrigger(PARAM_ATTACK);
 
-        // Зупиняємо рух під час атаки
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         anim.SetBool(PARAM_IS_MOVING, false);
 
-        // Встановлюємо таймер для автоматичного скидання стану атаки
-        // на випадок, якщо Animation Event не спрацює
+        weaponSystem?.EnableHitboxForWindow();
+
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+        // пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ Animation Event пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         Invoke("OnAttackComplete", 1.0f);
     }
 
-    // Метод викликається як Animation Event в кінці анімації атаки
-    // або автоматично через Invoke
+    // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ Animation Event пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
+    // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ Invoke
     public void OnAttackComplete()
     {
-        // Відміняємо автоматичний виклик, якщо метод викликаний через Animation Event
+        // ВіпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ Animation Event
         CancelInvoke("OnAttackComplete");
 
-        // Скидаємо стан атаки
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         isAttacking = false;
 
-        // Явно скидаємо тригер атаки
+        weaponSystem?.DisableHitbox();
+
+        // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         anim.ResetTrigger(PARAM_ATTACK);
     }
 }
